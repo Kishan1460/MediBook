@@ -4,6 +4,7 @@ A full-stack appointment booking app for patients: register, log in, manage your
 book appointments with a department/date/time, browse services, and review past appointments.
 
 Built with:
+
 - **Frontend:** React (Vite, JavaScript/JSX, ES modules), Redux Toolkit, React Router,
   Tailwind CSS, react-icons, react-hot-toast, axios
 - **Backend:** Node.js, Express, MongoDB (Mongoose), JWT auth, Multer file uploads
@@ -48,13 +49,13 @@ npm run dev    # starts the API on http://localhost:5000
 
 Environment variables (`server/.env`):
 
-| Variable         | Description                                  |
-|------------------|-----------------------------------------------|
-| `PORT`           | API port (default `5000`)                     |
-| `MONGO_URI`      | MongoDB connection string                      |
-| `JWT_SECRET`     | Secret used to sign auth tokens — set a real one |
-| `JWT_EXPIRES_IN` | Token lifetime (default `7d`)                  |
-| `CLIENT_ORIGIN`  | Frontend origin allowed by CORS (default `http://localhost:5173`) |
+| Variable           | Description                                                        |
+| ------------------ | ------------------------------------------------------------------ |
+| `PORT`           | API port (default`5000`)                                         |
+| `MONGO_URI`      | MongoDB connection string                                          |
+| `JWT_SECRET`     | Secret used to sign auth tokens — set a real one                  |
+| `JWT_EXPIRES_IN` | Token lifetime (default`7d`)                                     |
+| `CLIENT_ORIGIN`  | Frontend origin allowed by CORS (default`http://localhost:5173`) |
 
 ## 2. Frontend setup
 
@@ -97,9 +98,3 @@ and `JWT_SECRET`) to your Node hosting of choice.
   accordion.
 - **Responsive layout** — the header collapses to a mobile menu and the sidebar adapts on small
   screens.
-
-## Design notes
-
-The UI uses a teal (`primary`) + warm amber (`accent`) palette rather than the pink/purple used
-in the original mockups, chosen for a calmer, more approachable healthcare feel while keeping the
-same page structure (header, sidebar, cards) from the brief.
