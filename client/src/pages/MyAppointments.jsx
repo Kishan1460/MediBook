@@ -5,6 +5,7 @@ import AppLayout from "../components/AppLayout";
 import AppointmentCard from "../components/AppointmentCard";
 import { fetchAppointments } from "../redux/slices/appointmentSlice";
 
+// My Appointments page component for displaying user's appointments
 const MyAppointments = () => {
   const dispatch = useDispatch();
   const { items, loading } = useSelector((state) => state.appointments);

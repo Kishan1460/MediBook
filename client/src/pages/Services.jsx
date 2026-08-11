@@ -6,6 +6,7 @@ import Carousel from "../components/Carousel";
 import Accordion from "../components/Accordion";
 import { fetchServices } from "../redux/slices/serviceSlice";
 
+// Highlight slides for the Services page
 const highlightSlides = [
   {
     title: "Same-day appointments",
@@ -21,6 +22,7 @@ const highlightSlides = [
   },
 ];
 
+// FAQ questions for the Services page
 const faqItems = [
   {
     question: "How do I book an appointment?",

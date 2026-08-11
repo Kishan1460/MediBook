@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import AppLayout from "../components/AppLayout";
 import { fetchProfile, updateProfile } from "../redux/slices/authSlice";
 
+// Initial empty form state for the Patient Dashboard
 const emptyForm = {
   firstName: "",
   lastName: "",
@@ -16,6 +17,7 @@ const emptyForm = {
   zipcode: "",
 };
 
+// Patient Dashboard component for displaying and updating patient details
 const PatientDashboard = () => {
   const dispatch = useDispatch();
   const { user, loading } = useSelector((state) => state.auth);

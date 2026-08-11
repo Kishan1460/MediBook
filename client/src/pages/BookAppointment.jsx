@@ -6,6 +6,7 @@ import { HiOutlineUpload } from "react-icons/hi";
 import AppLayout from "../components/AppLayout";
 import { createAppointment } from "../redux/slices/appointmentSlice";
 
+// List of available departments for booking appointments
 const departments = [
   "Dermatologist",
   "Gynecologist",
@@ -15,6 +16,7 @@ const departments = [
   "Orthopedic",
 ];
 
+// BookAppointment component for booking a new appointment
 const BookAppointment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

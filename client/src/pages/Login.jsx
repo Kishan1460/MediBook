@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { login } from "../redux/slices/authSlice";
 
+// Login page component for user authentication
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +19,8 @@ const Login = () => {
     setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
-
+  
+  // Validate form inputs and set error messages
   const validate = () => {
     const nextErrors = {};
     if (!form.email.trim()) {

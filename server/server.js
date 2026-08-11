@@ -2,14 +2,23 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './config/swagger.js'; 
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
 import serviceRoutes from "./routes/serviceRoutes.js";
 
+
 dotenv.config();
 
 const app = express();
+
+// Swagger UI setup
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  customSiteTitle: 'MediBook API Docs',
+  customCss: '.swagger-ui .topbar { background-color: #1D9E75; }',
+}));
 
 app.use(
   cors({

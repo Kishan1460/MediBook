@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
-
+// Carousel component for displaying a slideshow of slides with navigation controls
 const Carousel = ({ slides, interval = 5000, className = "" }) => {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -20,6 +20,7 @@ const Carousel = ({ slides, interval = 5000, className = "" }) => {
   const goTo = (index) => setActive((index + slides.length) % slides.length);
 
   return (
+    // Carousel container with navigation buttons and slide indicators
     <div
       className={`relative overflow-hidden rounded-2xl ${className}`}
       onMouseEnter={() => setPaused(true)}
@@ -40,7 +41,7 @@ const Carousel = ({ slides, interval = 5000, className = "" }) => {
           </div>
         ))}
       </div>
-
+      {/* Navigation buttons and slide indicators */}
       {slides.length > 1 && (
         <>
           <button
